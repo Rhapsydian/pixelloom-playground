@@ -11,7 +11,7 @@ This is a demo, not the library — for the actual boundary-tracing algorithm, s
 Plain HTML/CSS/vanilla JS, no framework, no build step. It imports pixelloom directly from a CDN as a native ES module, pinned to a specific version so this demo can't silently break if the library's API changes later:
 
 ```js
-import { gridToPath, gridToSvg } from 'https://unpkg.com/pixelloom@0.1.0/src/index.js';
+import { gridToPath, gridToSvg } from 'https://unpkg.com/pixelloom@0.1.1/src/index.js';
 ```
 
 ## Running locally

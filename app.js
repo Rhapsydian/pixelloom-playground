@@ -1,6 +1,6 @@
 // Pinned to a specific pixelloom version so this demo can't silently change
 // behavior if a future release changes the API.
-import { gridToPath, gridToSvg } from 'https://unpkg.com/pixelloom@0.1.0/src/index.js';
+import { gridToPath, gridToSvg } from 'https://unpkg.com/pixelloom@0.1.1/src/index.js';
 
 const PRESETS = {
   donut: {
