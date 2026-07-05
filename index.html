@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Pixelloom Playground</title>
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<header>
+  <h1>Pixelloom Playground</h1>
+  <p>
+    Paint a pixel grid and watch
+    <a href="https://github.com/Rhapsydian/pixelloom" target="_blank" rel="noopener">pixelloom</a>
+    trace it into an optimized SVG path, live.
+    See it on <a href="https://www.npmjs.com/package/pixelloom" target="_blank" rel="noopener">npm</a>.
+  </p>
+</header>
+
+<main>
+  <section class="controls">
+    <label>Width <input id="width" type="number" min="1" max="32" value="3" /></label>
+    <label>Height <input id="height" type="number" min="1" max="32" value="3" /></label>
+    <button id="clear" type="button">Clear</button>
+    <button id="fill" type="button">Fill</button>
+    <div class="presets">
+      <span>Presets:</span>
+      <button data-preset="donut" type="button">Donut</button>
+      <button data-preset="lTromino" type="button">L-tromino</button>
+      <button data-preset="nestedHoles" type="button">Nested holes</button>
+      <button data-preset="selfTouchingPinch" type="button">Self-touching pinch</button>
+    </div>
+  </section>
+
+  <section class="workspace">
+    <div class="panel">
+      <h2>Paint</h2>
+      <div id="grid" class="grid"></div>
+    </div>
+    <div class="panel">
+      <h2>Traced result</h2>
+      <div id="preview" class="preview"></div>
+      <pre id="path"><code></code></pre>
+      <p id="stats"></p>
+    </div>
+  </section>
+</main>
+
+<script type="module" src="app.js"></script>
+</body>
+</html>

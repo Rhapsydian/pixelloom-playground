@@ -1,0 +1,9 @@
+{
+  "name": "pixelloom-playground",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Interactive demo for pixelloom - paint a pixel grid and watch it trace into an optimized SVG path live.",
+  "scripts": {
+    "start": "npx serve ."
+  }
+}

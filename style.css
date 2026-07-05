@@ -1,0 +1,102 @@
+:root {
+  color-scheme: light dark;
+  --gap: 2px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: system-ui, sans-serif;
+  max-width: 900px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+  line-height: 1.5;
+}
+
+header p {
+  color: #666;
+}
+
+.controls {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 1.5rem;
+}
+
+.controls label {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.controls input[type='number'] {
+  width: 4rem;
+}
+
+.presets {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.workspace {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+
+@media (max-width: 640px) {
+  .workspace {
+    grid-template-columns: 1fr;
+  }
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(var(--cols), 1fr);
+  grid-template-rows: repeat(var(--rows), 1fr);
+  gap: var(--gap);
+  aspect-ratio: var(--cols) / var(--rows);
+  border: 1px solid #888;
+  padding: var(--gap);
+}
+
+.cell {
+  background: #fff;
+  border: 1px solid #ccc;
+  padding: 0;
+  cursor: pointer;
+}
+
+.cell[aria-pressed='true'] {
+  background: #222;
+  border-color: #222;
+}
+
+.preview {
+  border: 1px solid #888;
+  padding: 0.5rem;
+}
+
+.preview svg {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+pre {
+  background: #f5f5f5;
+  padding: 0.5rem;
+  overflow-x: auto;
+  white-space: pre-wrap;
+  word-break: break-all;
+}
+
+#stats {
+  font-weight: 600;
+}
